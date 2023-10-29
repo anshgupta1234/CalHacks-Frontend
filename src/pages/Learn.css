@@ -14,10 +14,6 @@
     margin-top: 90px;
 }
 
-.textArea {
-
-}
-
 .nameTitle {
     text-shadow: #fff;
     text-shadow: 5cm;
@@ -40,10 +36,17 @@
     font-size: medium;
 }
 
+.videos {
+    border-radius: 30px;
+    padding: 16px;
+    width: 350px;
+    height: 200px;
+}
+
 .leftBar {
     flex: 0 0 auto;
     flex-direction: column;
-    width: 30vw;
+    width: 25vw;
     background-color: #eee;
     height: 100vh;
 }
@@ -51,7 +54,7 @@
 .rightBar { 
     flex: 1;
     flex-direction: column;
-    width: 70vw;
+    width: 75vw;
     height: 100vh;
     background-color: #f5f5f5;
 }
