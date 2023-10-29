@@ -10,6 +10,7 @@ const Camera = () => {
 
   const [isRecording, setIsRecording] = useState(false);
   const [link, setLink] = useState(null);
+  const [response, setResponse] = useState("The response will be here.");
 
 
   const startRecording = () => {
@@ -53,30 +54,36 @@ const Camera = () => {
     fetch('http://127.0.0.1:5004/process_video', {
         method: 'POST',
         body: formData,
-    }).then(response => response.json()).then(response => console.log(response))
+    }).then(response => response.json()).then(response => setResponse(response.response))
     chunksRef.current = [];
   };
 
   return (
-    <div className='camera-parent'>
+    <div>
+      <div className='camera-parent'>
 
-      <div className='record-vid'>
-        <video ref={videoRef} width={400} height={300} autoPlay playsInline muted />
+        <div className='record-vid'>
+          <video ref={videoRef} width={400} height={300} autoPlay playsInline muted />
 
-        {isRecording ? (
-          <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={stopRecording}>Stop</Button>
-        ) : (
-          <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={startRecording}>Record</Button>
+          {isRecording ? (
+            <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={stopRecording}>Stop</Button>
+          ) : (
+            <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={startRecording}>Record</Button>
 
-        )}
+          )}
 
-      </div>
+        </div>
 
-      {
-        link != null ? (
-          <video src={link} width={400} height={300} controls />
-        ) : null
-      }
+        {
+          link != null ? (
+            <video src={link} width={400} height={300} controls />
+          ) : null
+        }
+        <h6>Results</h6>
+        <div>        
+          { response }
+        </div>
+        </div>
     </div>
   );
 };

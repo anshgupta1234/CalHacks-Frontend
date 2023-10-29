@@ -4,8 +4,10 @@ import { PermanentDrawerLeft } from '../components/PermanentDrawerLeft';
 import Typography from '@mui/material/Typography';
 import Camera from '../components/Camera';
 import "./Learn.css";
+import DynamicSizedPaper from '../components/Paper';
 
-const Learn = () => {
+
+function Learn(){
 	return (
 		<div className='parent'>
 			<div className='appBar'>
@@ -21,10 +23,10 @@ const Learn = () => {
 						<div className='scrolling'>
 							<Typography className='nameTitle' variant='h2' align='center' >Barack Obama</Typography>
 							<ul className='bullets'> <text>Tips To Be Like Obama!</text>
-								<li>Speak Good</li>
-								<li>Don't be Racist!!</li>
-								<li>Pretend to be Humanitarian!</li>
-								<li>Care about the environment because it'll kill you</li>
+								<li>Barack Obama is known for his effective communication skills and commanding use of language.</li>
+								<li>When addressing his audience, Obama ensures that his voice conveys passion and a sense of drive, keeping the audience engaged.</li>
+								<li>Obama incorporates humor into his speeches, demonstrating a willingness to go beyond conventional boundaries.</li>
+								<li>In conclusion, Obama consistently emphasizes hopefulness in his speeches, reflecting genuine emotions that resonate with his audiences.</li>
 							</ul>
 							<div >
 								<iframe className='videos' src="https://www.youtube.com/embed/c9fXiv1UELo" title="Pulsar Bike Full Video Song | Dhamaka | Ravi Teja | Sreeleela | Thrinadha Rao | Bheems Ceciroleo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -32,6 +34,7 @@ const Learn = () => {
 							</div>
 							<text className='nameTitle'>Try it Yourself!</text>
 							<Camera></Camera>
+							<DynamicSizedPaper customWidth={480} customHeight={480} text={""}></DynamicSizedPaper>
 						</div>
 						
 					</div>
