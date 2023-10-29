@@ -18,6 +18,19 @@ import oprah from "./headshots/Oprah Winfrey.jpg"
 import steve from "./headshots/Steve Jobs.jpg"
 import trevor from "./headshots/Trevor Noah.jpg"
 
+const imageMapping = {
+  'Barack Obama': obama,
+  'Trevor Noah': trevor,
+  'Oprah Winfrey': oprah,
+  'Steve Jobs': steve,
+  'Jacinda Ardern': jacinda,
+  'Olaf Scholz': olaf,
+  'Margaret Thatcher': margaret,
+  'Alexandria Ocasio-Cortez': aoc,
+  'Mel Robbins': mel,
+  'Malala Yousafzai': malala,
+};
+
 export function PermanentDrawerLeft() {
     return (
       <List className='leftDrawer'>
@@ -27,7 +40,7 @@ export function PermanentDrawerLeft() {
               <ListItemAvatar>
                 <Avatar
                 //add the photos too LMAO
-                  src={obama}
+                  src={imageMapping[text]}
                 />
               </ListItemAvatar>
               <ListItemText primary={text} />
