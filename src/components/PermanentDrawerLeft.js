@@ -7,6 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import "./PermanentDrawerLeft.css";
+import headshot from "./headshots/Barack_Obama.jpg"
 
 export function PermanentDrawerLeft() {
     return (
@@ -14,10 +15,10 @@ export function PermanentDrawerLeft() {
         {['Alexandria Ocasio-Cortez', 'Trevor Noah', 'Oprah Winfrey', 'Steve Jobs', 'Jacinda Ardern', 'Olaf Scholz', 'Margaret Thatcher', 'Barack Obama', 'Mel Robbins', 'Malala Yousafzai'].map((text, index) => (
           <ListItem key={TextDecoder} >
             <ListItemButton className='eachButton'>
-              <ListItemAvatar>
+              <ListItemAvatar src="/headshots/Barack_Obama.jpg">
                 <Avatar
                 //add the photos too LMAO
-                  src={`./headshots/Barack_Obama.jpg`}
+                  src={headshot}
                 />
               </ListItemAvatar>
               <ListItemText primary={text} />

@@ -1,27 +1,7 @@
-
-/*
-export default function Camera() {
-
-	<VideoRecorder
-		onRecordingComplete={(videoBlob) => {
-			const video = new File([videoBlob], 'recorded_vid.mp4', {type: 'video/mp4' });
-			const formData = new FormData();
-			formData.append("video", video);
-			formData.append("speaker", "Celebrity");
-
-			fetch('http://127.0.0.1:5002/process_video', {
-				method: 'POST',
-				body: formData,
-			}).then(response => response.json()).then(response => console.log(response))
-			this.state.current = [];
-		}}
-	/>
-}
-*/
-
-
 import React, { useState, useRef } from 'react';
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import './Camera.css'
 
 const Camera = () => {
   const videoRef = useRef(null);
@@ -58,8 +38,6 @@ const Camera = () => {
     }
   };
 
-
-
   const handleStop = () => {
     const blob = new Blob(chunksRef.current, { type: 'video/mp4' });
     const url = URL.createObjectURL(blob);
@@ -72,7 +50,7 @@ const Camera = () => {
     formData.append("video", video);
     formData.append("speaker", "yo mama");
 
-    fetch('http://127.0.0.1:5003/process_video', {
+    fetch('http://127.0.0.1:5004/process_video', {
         method: 'POST',
         body: formData,
     }).then(response => response.json()).then(response => console.log(response))
@@ -80,22 +58,25 @@ const Camera = () => {
   };
 
   return (
-    <div>
+    <div className='camera-parent'>
 
-      <video ref={videoRef} width={400} height={300} autoPlay playsInline muted />
-      {isRecording ? (
-        <button onClick={stopRecording}>Stop Recording</button>
-      ) : (
-        <button onClick={startRecording}>Start Recording</button>
+      <div className='record-vid'>
+        <video ref={videoRef} width={400} height={300} autoPlay playsInline muted />
 
-      )}
+        {isRecording ? (
+          <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={stopRecording}>Stop</Button>
+        ) : (
+          <Button sx={{ m: 2 }} className="cam-button" variant="contained" onClick={startRecording}>Record</Button>
 
-      <video src={link} width={400} height={300} controls />
-      <Link to="/">
-        <button>
-            Go back home
-        </button>
-      </Link>
+        )}
+
+      </div>
+
+      {
+        link != null ? (
+          <video src={link} width={400} height={300} controls />
+        ) : null
+      }
     </div>
   );
 };
