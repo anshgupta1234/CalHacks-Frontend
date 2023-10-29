@@ -72,7 +72,7 @@ const Camera = () => {
     formData.append("video", video);
     formData.append("speaker", "yo mama");
 
-    fetch('http://127.0.0.1:5002/process_video', {
+    fetch('http://127.0.0.1:5003/process_video', {
         method: 'POST',
         body: formData,
     }).then(response => response.json()).then(response => console.log(response))
