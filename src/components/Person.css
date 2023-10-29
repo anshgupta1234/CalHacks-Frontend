@@ -1,0 +1,12 @@
+.personParent {
+    text-align: center;;
+    border-radius: 10px;
+}
+
+.person {
+    display: inline-block;
+}
+
+.personName {
+    display: inline-block;
+}

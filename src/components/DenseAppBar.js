@@ -6,15 +6,20 @@ import Typography from '@mui/material/Typography';
 
 export function DenseAppBar() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" color='secondary'>
-            <Toolbar variant="dense" align='center'>
+        <AppBar>
+            <Toolbar
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+                variant="dense"
+            >
             <Typography variant="h3" color="inherit" component="div" mt={2} mb={2} >
                 Loqui
             </Typography>
             </Toolbar>
         </AppBar>
-        </Box>
     );
 }
   

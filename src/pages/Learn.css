@@ -1,0 +1,41 @@
+.parent {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.appBar{
+
+    order: 0;
+    
+}
+
+.childDiv {
+    display: flex;
+    margin-top: 90px;
+}
+
+.scrolling {
+    padding: 10%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.leftBar {
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: 30vw;
+    background-color: #eee;
+    height: 100vh;
+}
+  
+.rightBar { 
+    flex: 1;
+    flex-direction: column;
+    width: 70vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+}

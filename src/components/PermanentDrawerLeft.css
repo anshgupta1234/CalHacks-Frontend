@@ -1,0 +1,9 @@
+.leftDrawer {
+    display: flex;
+    flex-direction: column;
+}
+
+.eachButton {
+    border-radius: 10px;
+
+}
