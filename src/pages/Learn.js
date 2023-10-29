@@ -29,12 +29,11 @@ function Learn(){
 								<li>In conclusion, Obama consistently emphasizes hopefulness in his speeches, reflecting genuine emotions that resonate with his audiences.</li>
 							</ul>
 							<div >
-								<iframe className='videos' src="https://www.youtube.com/embed/c9fXiv1UELo" title="Pulsar Bike Full Video Song | Dhamaka | Ravi Teja | Sreeleela | Thrinadha Rao | Bheems Ceciroleo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-								<iframe className='videos' src="https://www.youtube.com/embed/VAdGW7QDJiU" title="JAWAN: Chaleya (Hindi) | Shah Rukh Khan | Nayanthara | Atlee | Anirudh | Arijit S, Shilpa R | Kumaar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<iframe className='videos' src="https://www.youtube.com/embed/oZH4n6DfcFw" title="President Barack Obama delivers stirring speech in Parliament" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<iframe className='videos' src="https://www.youtube.com/embed/bps3m4eFTuE" title="Watch Barack Obama’s Full Speech At The 2020 DNC | NBC News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
 							<text className='nameTitle'>Try it Yourself!</text>
 							<Camera></Camera>
-							<DynamicSizedPaper customWidth={480} customHeight={480} text={""}></DynamicSizedPaper>
 						</div>
 						
 					</div>

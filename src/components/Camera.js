@@ -51,6 +51,8 @@ const Camera = () => {
     formData.append("video", video);
     formData.append("speaker", "yo mama");
 
+    setResponse("test")
+
     fetch('http://127.0.0.1:5004/process_video', {
         method: 'POST',
         body: formData,

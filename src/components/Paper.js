@@ -11,10 +11,9 @@ const CustomPaper = styled(Paper)(({ theme, customWidth, customHeight }) => ({
   height: customHeight || 'auto',
 }));
 
-export default function DynamicSizedPaper({ customWidth, customHeight, text }){
+export default function DynamicSizedPaper({ customWidth, customHeight }){
   return (
     <CustomPaper variant="elevation" customWidth={customWidth} customHeight={customHeight}>
-      <Typography variant="h5">{text}</Typography>
     </CustomPaper>
   );
 };
