@@ -7,18 +7,27 @@ import Avatar from '@mui/material/Avatar';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import "./PermanentDrawerLeft.css";
-import headshot from "./headshots/Barack_Obama.jpg"
+import obama from "./headshots/Barack_Obama.jpg"
+import aoc from "./headshots/Alexandria Ocasio-Cortez.jpg"
+import jacinda from "./headshots/Jacinda Ardern.jpg"
+import malala from "./headshots/Malala Yousafzai.jpg"
+import margaret from "./headshots/Margaret Thatcher.jpg"
+import mel from "./headshots/Mel Robbins.jpg"
+import olaf from "./headshots/Olaf Scholz.jpg"
+import oprah from "./headshots/Oprah Winfrey.jpg"
+import steve from "./headshots/Steve Jobs.jpg"
+import trevor from "./headshots/Trevor Noah.jpg"
 
 export function PermanentDrawerLeft() {
     return (
       <List className='leftDrawer'>
-        {['Alexandria Ocasio-Cortez', 'Trevor Noah', 'Oprah Winfrey', 'Steve Jobs', 'Jacinda Ardern', 'Olaf Scholz', 'Margaret Thatcher', 'Barack Obama', 'Mel Robbins', 'Malala Yousafzai'].map((text, index) => (
+        {['Barack Obama', 'Trevor Noah', 'Oprah Winfrey', 'Steve Jobs', 'Jacinda Ardern', 'Olaf Scholz', 'Margaret Thatcher', 'Alexandria Ocasio-Cortez', 'Mel Robbins', 'Malala Yousafzai'].map((text, index) => (
           <ListItem key={TextDecoder} >
             <ListItemButton className='eachButton'>
-              <ListItemAvatar src="/headshots/Barack_Obama.jpg">
+              <ListItemAvatar>
                 <Avatar
                 //add the photos too LMAO
-                  src={headshot}
+                  src={obama}
                 />
               </ListItemAvatar>
               <ListItemText primary={text} />
