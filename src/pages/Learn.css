@@ -6,9 +6,7 @@
 }
 
 .appBar{
-
     order: 0;
-    
 }
 
 .childDiv {
@@ -16,12 +14,30 @@
     margin-top: 90px;
 }
 
+.textArea {
+
+}
+
+.nameTitle {
+    text-shadow: #fff;
+    text-shadow: 5cm;
+}
+
 .scrolling {
-    padding: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+
     max-height: 50vh;
+    min-height: 50vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
 
+}
+
+.bullets {
+    font-size: medium;
 }
 
 .leftBar {
