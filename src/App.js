@@ -90,7 +90,7 @@ const App = () => {
   return (
     <div>
       <PermanentDrawerLeft></PermanentDrawerLeft>
-      <DenseAppBar align='center'></DenseAppBar>
+      <DenseAppBar></DenseAppBar>
       
     </div>
   );
